@@ -11,7 +11,10 @@ import sys
 import Log
 import MemPool
 import ChainDb
-import cStringIO
+#import cStringIO
+from io import StringIO
+import io
+
 
 from bitcoin.coredefs import NETWORKS
 from bitcoin.core import CBlock
@@ -46,7 +49,7 @@ for height in xrange(chaindb.getheight()):
 	blkhash = heightidx.blocks[0]
 	ser_hash = ser_uint256(blkhash)
 
-	f = cStringIO.StringIO(chaindb.blocks[ser_hash])
+	f = io.StringIO(chaindb.blocks[ser_hash])
 	block = CBlock()
 	block.deserialize(f)
 
