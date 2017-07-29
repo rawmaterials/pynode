@@ -8,6 +8,7 @@
 
 import string
 #import cStringIO
+from io import StringIO
 import leveldb
 import io
 import os
