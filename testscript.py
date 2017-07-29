@@ -12,7 +12,10 @@ import time
 import Log
 import MemPool
 import ChainDb
-import cStringIO
+#import cStringIO
+from io import StringIO
+import io
+
 
 from bitcoin.coredefs import NETWORKS
 from bitcoin.core import CBlock
