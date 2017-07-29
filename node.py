@@ -18,7 +18,9 @@ import time
 import sys
 import re
 import random
-import cStringIO
+#import cStringIO
+from io import StringIO
+import io
 import copy
 import re
 import hashlib
