@@ -64,4 +64,3 @@ for height in xrange(chaindb.getheight()):
 
 
 log.write("Scanned %d blocks (%d failures)" % (scanned, failures))
-
