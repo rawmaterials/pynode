@@ -9,7 +9,10 @@
 import re
 import base64
 import json
-import cStringIO
+#import cStringIO
+from io import StringIO
+import io
+
 import struct
 import sys
 import itertools
@@ -214,7 +217,7 @@ class RPCExec(object):
 
 		data = bufreverse(data)
 		blkhdr = data[:80]
-		f = cStringIO.StringIO(blkhdr)
+		f = io.StringIO(blkhdr)
 		block_tmp = CBlock()
 		block_tmp.deserialize(f)
 
@@ -249,7 +252,7 @@ class RPCExec(object):
 			return (None, err)
 
 		data = params[0].decode('hex')
-		f = cStringIO.StringIO(data)
+		f = io.StringIO(data)
 		block = CBlock()
 		block.deserialize(f)
 
