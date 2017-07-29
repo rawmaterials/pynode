@@ -11,7 +11,9 @@ import sys
 import Log
 import MemPool
 import ChainDb
-import cStringIO
+#import cStringIO
+from io import StringIO
+import io
 import struct
 import argparse
 
