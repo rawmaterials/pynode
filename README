@@ -22,7 +22,7 @@ Dependencies:
 
 Command line usage:
 
-	./node.py my-config-file
+	./node.py pynode.conf
 
 The configuration file is a key=value text file, with the following settings:
 
