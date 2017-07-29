@@ -7,7 +7,7 @@
 #
 
 import string
-import cStringIO
+#import cStringIO
 import leveldb
 import io
 import os
@@ -670,7 +670,7 @@ class ChainDb(object):
 			ser_blk = buf[blkpos:blkpos+blksize]
 			buf = buf[blkpos+blksize:]
 
-			f = cStringIO.StringIO(ser_blk)
+			f = io.StringIO(ser_blk)
 			block = CBlock()
 			block.deserialize(f)
 
